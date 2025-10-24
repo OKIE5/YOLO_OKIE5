@@ -1,0 +1,17 @@
+name: yolo1
+channels:
+  - pytorch
+  - nvidia
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - pytorch=2.4.*
+  - torchvision=0.19.*
+  - pytorch-cuda=12.1
+  - numpy
+  - pyyaml
+  - pip:
+      - ultralytics
+      - opencv-python

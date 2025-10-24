@@ -1,0 +1,13 @@
+name: yolo-jetson
+channels:
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - numpy=1.26.*
+  - pyyaml
+  - opencv
+  - onnx
+  - tqdm
+  - pip:
+      - ultralytics
