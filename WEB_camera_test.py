@@ -1,23 +1,18 @@
+# webcam_min_cam5.py
 import cv2
 
-cap = cv2.VideoCapture(0)
+CAMERA_INDEX = 5 # 0 for default camera, change as needed
+
+cap = cv2.VideoCapture(CAMERA_INDEX)
 
 if not cap.isOpened():
-    print("Error: Could not open camera")
-    exit()
-
-print("Press 'q' to quit")
+    raise RuntimeError(f"Could not open camera index {CAMERA_INDEX}")
 
 while True:
-    ret, frame = cap.read()
-    
-    if not ret:
-        print("Error: Can't receive frame")
+    ok, frame = cap.read()
+    if not ok:
         break
-    
-    cv2.imshow('Camera Feed', frame)
-    
-    # Wait for 'q' key to exit
+    cv2.imshow("Camera", frame)
     if cv2.waitKey(1) & 0xFF == ord('q'):
         break
 

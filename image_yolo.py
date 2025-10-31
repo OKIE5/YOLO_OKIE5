@@ -4,7 +4,8 @@ import cv2
 from ultralytics import YOLO
 
 WEIGHTS = r"C:\Users\jpenv\Documents\scripts\YOLO\ultralytics\weights\yolo11l.pt"
-SRC_IMG = r"C:\Users\jpenv\Documents\scripts\YOLO\gptHollowween.png"
+SRC_IMG = r"C:\Users\jpenv\Documents\scripts\YOLO\YOLO\gptHollowween.png"
+
 
 model = YOLO(WEIGHTS)
 results = model(SRC_IMG)
